@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tenderWatch.EditTenderDetail"
+    tools:showIn="@layout/activity_edit_tender_detail">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dip"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="10px">
+
+        <com.tenderWatch.Validation.MyScrollView
+            android:id="@+id/home_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_design"
+                    android:padding="@dimen/value_5">
+
+                    <TextView
+                        android:id="@+id/txt_home_country_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/value_20"
+                        android:singleLine="true"
+                        android:text="Select Country"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_15"
+                        android:editable="false"/>
+
+<!--                    <FrameLayout-->
+<!--                        android:id="@+id/FrameLayout1"-->
+<!--                        android:layout_width="@dimen/value_20"-->
+<!--                        android:layout_height="@dimen/value_20"-->
+<!--                        android:layout_alignParentRight="true">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/down_arrow"-->
+<!--                            android:layout_width="@dimen/value_15"-->
+<!--                            android:layout_height="@dimen/value_15"-->
+<!--                            android:src="@drawable/sort_down_filled" />-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/up_arrow"-->
+<!--                            android:layout_width="@dimen/value_15"-->
+<!--                            android:layout_height="@dimen/value_15"-->
+<!--                            android:src="@drawable/sort_up_filled"-->
+<!--                            android:visibility="gone" />-->
+<!--                    </FrameLayout>-->
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/country_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/value_2"
+                    android:background="@drawable/listview_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/value_5">
+
+                        <EditText
+                            android:id="@+id/edtSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_35"
+                            android:background="@drawable/searchbox"
+                            android:gravity="center_vertical"
+                            android:nextFocusLeft="@id/edtSearch"
+                            android:nextFocusUp="@id/edtSearch"
+                            android:singleLine="true"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:layout_alignTop="@+id/edtSearch"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/value_8"
+                            android:src="@android:drawable/ic_menu_search" />
+
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:background="@drawable/textview_design"
+                    android:padding="@dimen/value_5">
+
+                    <ListView
+                        android:id="@+id/lvCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:choiceMode="singleChoice"
+                        android:paddingBottom="@dimen/value_30"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_contact_category_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/value_20"
+                        android:singleLine="true"
+                        android:text="Select Category"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_15"
+                        android:visibility="visible" />
+
+                    <FrameLayout
+                        android:id="@+id/FrameLayout2"
+                        android:layout_width="@dimen/value_20"
+                        android:layout_height="@dimen/value_20"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/down_arrow2"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_down_filled" />
+
+                        <ImageView
+                            android:id="@+id/up_arrow2"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_up_filled"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/category_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/value_2"
+                    android:background="@drawable/listview_border"
+                    android:orientation="vertical"
+                    android:padding="@dimen/value_5"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/btn_done_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingTop="@dimen/value_4"
+                        android:paddingRight="@dimen/value_10"
+                        android:paddingBottom="@dimen/value_4"
+                        android:text="@string/done" />
+
+                    <ListView
+                        android:id="@+id/spinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:choiceMode="multipleChoice"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_target_viewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/textview_design"
+                    android:padding="@dimen/value_5">
+
+                    <TextView
+                        android:id="@+id/txt_target_viewer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/value_20"
+                        android:singleLine="true"
+                        android:text="Target Viewer"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_15" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_target_viewer"
+                        android:layout_width="@dimen/value_20"
+                        android:layout_height="@dimen/value_20"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/down_arrow_target_viewer"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_down_filled" />
+
+                        <ImageView
+                            android:id="@+id/up_arrow_target_viewer"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_up_filled"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_target_viewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:layout_marginBottom="-13dp"
+                    android:background="@drawable/listview_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ListView
+                        android:id="@+id/spinner_targetViewer"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/value_150"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/home_city"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_design"
+                        android:hint="City"
+                        android:padding="@dimen/value_5"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/home_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_design"
+                        android:hint="Tender Title"
+                        android:padding="@dimen/value_5"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:background="@drawable/edittext_design"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/home_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:hint="Tender Description"
+                        android:lines="5"
+                        android:background="@null"
+                        android:padding="@dimen/value_5" />
+
+
+                    <EditText
+                        android:id="@+id/home_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Website Link"
+                        android:padding="@dimen/value_5"
+                        android:background="@null"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_contact_tender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:background="@drawable/textview_design"
+                    android:padding="@dimen/value_5">
+
+
+                    <TextView
+                        android:id="@+id/txt_password3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="How Should Contractor Apply For This Tender"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_12" />
+
+                    <FrameLayout
+                        android:id="@+id/FrameLayout3"
+                        android:layout_width="@dimen/value_20"
+                        android:layout_height="@dimen/value_20"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/down_arrow3"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_down_filled" />
+
+                        <ImageView
+                            android:id="@+id/up_arrow3"
+                            android:layout_width="@dimen/value_15"
+                            android:layout_height="@dimen/value_15"
+                            android:src="@drawable/sort_up_filled"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_contact_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:background="@drawable/listview_border"
+                    android:paddingTop="@dimen/value_10"
+                    android:paddingBottom="@dimen/value_10"
+                    android:visibility="gone">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/value_25"
+                            android:layout_height="@dimen/value_25"
+                            android:src="@drawable/mail_3x"
+                            android:layout_marginTop="@dimen/value_7"
+                            />
+
+                        <EditText
+                            android:id="@+id/contact_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/value_30"
+                            android:hint="Email"
+                            android:textSize="@dimen/text_20"
+                            android:backgroundTint="@android:color/transparent"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            />
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#808080"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginBottom="@dimen/value_5"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginTop="@dimen/value_10"
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/value_25"
+                            android:layout_height="@dimen/value_25"
+                            android:src="@drawable/mobile_3x"
+                            android:layout_marginTop="@dimen/value_7"
+                            />
+                        <TextView
+                            android:id="@+id/contact_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_20"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginLeft="@dimen/value_30"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="9dp"
+                            />
+                        <EditText
+                            android:layout_toRightOf="@+id/contact_code"
+                            android:inputType="phone"
+                            android:id="@+id/contact_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile Number"
+                            android:textSize="@dimen/text_20"
+                            android:backgroundTint="@android:color/transparent"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#808080"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginBottom="@dimen/value_5"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginTop="@dimen/value_10"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/value_25"
+                            android:layout_height="@dimen/value_25"
+                            android:src="@drawable/landline_3x"
+                            android:layout_marginTop="@dimen/value_7"
+                            />
+
+                        <TextView
+                            android:id="@+id/contact_landline_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_20"
+                            android:text=""
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginLeft="@dimen/value_30"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="9dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/contact_landline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/contact_landline_code"
+                            android:hint="Landline Number"
+                            android:textSize="@dimen/text_20"
+                            android:inputType="number"
+                            android:backgroundTint="@android:color/transparent"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#808080"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginBottom="@dimen/value_5"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginTop="@dimen/value_10"
+                        android:id="@+id/selectCountry"
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/value_25"
+                            android:layout_height="@dimen/value_25"
+                            android:src="@drawable/location_3x"
+                            android:layout_marginTop="@dimen/value_7"
+                            />
+
+                        <EditText
+                            android:id="@+id/contact_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/value_30"
+                            android:hint="Address"
+                            android:textSize="@dimen/text_20"
+                            android:gravity="top"
+                            android:backgroundTint="@android:color/transparent"
+                            android:lines="4"
+                            android:maxLines="4"
+                            android:textColor="@color/colorBlack"
+                            />
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#808080"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginBottom="@dimen/value_5"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginTop="@dimen/value_10">
+                        <FrameLayout
+                            android:id="@+id/FrameLayout13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+                            <ImageView
+                                android:id="@+id/home_box"
+                                android:layout_width="@dimen/value_25"
+                                android:layout_height="@dimen/value_25"
+                                android:src="@drawable/chabox_3x"/>
+                            <ImageView
+                                android:id="@+id/home_box_checked"
+                                android:layout_width="@dimen/value_25"
+                                android:layout_height="@dimen/value_25"
+                                android:src="@drawable/chaboxcheked_3x"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+
+                        <CheckBox
+                            android:id="@+id/cb_follow_tender"
+                            android:layout_width="@dimen/value_20"
+                            android:layout_height="@dimen/value_20"
+                            android:button="@null"
+                            android:background="@drawable/check_box" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Follow Tender Process (As in image above)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18"
+                            android:layout_marginLeft="@dimen/value_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_15"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/value_30"
+                        android:layout_marginRight="@dimen/value_30"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cb_follow_tenderlink"
+                            android:layout_width="@dimen/value_20"
+                            android:layout_height="@dimen/value_20"
+                            android:button="@null"
+                            android:background="@drawable/check_box" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Follow Tender Link (As in Description above)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18"
+                            android:layout_marginLeft="@dimen/value_5"
+                            />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/contact_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_40"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/value_50"
+                        android:layout_marginRight="@dimen/value_50"
+                        android:layout_marginTop="@dimen/value_15"
+                        android:background="@drawable/button"
+                        android:text="@string/done"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tender_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/value_2"
+                        android:src="@drawable/tender_place" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_40"
+                    android:layout_marginLeft="@dimen/value_40"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginRight="@dimen/value_40"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_uploadTender"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_35"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button"
+                        android:text="Upload Tender"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_20" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.tenderWatch.Validation.MyScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

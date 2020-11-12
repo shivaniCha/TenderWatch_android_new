@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/item_pricing"
+        android:elevation="@dimen/value_10"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/value_15">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ll_free_trial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/item_pricing"
+            android:orientation="vertical"
+            android:padding="@dimen/value_10"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/value_10"
+                android:text="Free Trial"
+                android:textColor="@color/green_color"
+                android:textSize="@dimen/text_20" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#808080"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingRight="@dimen/value_12" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#808080"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingRight="@dimen/value_12"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_5"
+                android:text="Yearly Subscription ($120/Year)"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/value_5"
+                android:text="Enjoy 30 Day Free Trial"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/value_30"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/value_5"
+                android:background="@drawable/item_pricing"
+                android:textAllCaps="false"
+                android:textColor="@color/green_color"
+                android:visibility="invisible"
+                tools:text="Buy@ 90" />
+
+            <Button
+                android:id="@+id/btn_trial"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/value_30"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/value_5"
+                android:background="@drawable/item_pricing"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/green_color" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ll_pricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_pricing"
+            android:orientation="vertical"
+            android:padding="@dimen/value_5"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/value_10"
+                android:text="Monthly Subscription ($15/Month)"
+                android:textColor="@color/green_color"
+                android:textSize="@dimen/text_20" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#808080"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingRight="@dimen/value_12" />
+
+            <TextView
+                android:id="@+id/txt_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_5"
+                android:text="Monthly Subscription ($15/Month)"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15" />
+
+            <Button
+                android:id="@+id/btn_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/value_30"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/value_5"
+                android:background="@drawable/item_pricing"
+                android:textAllCaps="false"
+                android:textColor="@color/green_color"
+                tools:text="Buy@ 90" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#808080"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingRight="@dimen/value_12" />
+
+            <TextView
+                android:id="@+id/txt_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_5"
+                android:text="Yearly Subscription ($120/Year)"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15" />
+
+            <Button
+                android:id="@+id/btn_yearly"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/value_30"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/value_5"
+                android:background="@drawable/item_pricing"
+                android:textAllCaps="false"
+                android:textColor="@color/green_color"
+                tools:text="Buy@ 90" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context="com.tenderWatch.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.tenderWatch.utils.TypeWriterTextView
+                android:id="@+id/tv_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:text="Let's get Started! First,tell us what \n you are looking for."
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_20"
+                android:layout_marginTop="@dimen/value_20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/value_10"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+
+                <ImageView
+                    android:layout_width="@dimen/value_75"
+                    android:layout_height="@dimen/value_75"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:src="@drawable/ic_client" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginBottom="@dimen/value_10"
+                    android:text="I want to post \n Tenders"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_20"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_35"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/value_50"
+                    android:layout_marginRight="@dimen/value_50"
+                    android:layout_marginBottom="@dimen/value_15"
+                    android:background="@drawable/button"
+                    android:text="Client"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_20" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_15"
+                android:layout_weight="0.5"
+                android:gravity="top"
+                android:orientation="vertical">
+
+
+
+                <ImageView
+                    android:layout_width="@dimen/value_75"
+                    android:layout_height="@dimen/value_75"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:src="@drawable/ic_contractor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginBottom="@dimen/value_10"
+                    android:text="I'm looking for \n Tenders"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_20"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_contractor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_35"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/value_50"
+                    android:layout_marginRight="@dimen/value_50"
+                    android:layout_marginBottom="@dimen/value_15"
+                    android:background="@drawable/button"
+                    android:text="Contractor"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_20" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/aboutapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginBottom="@dimen/value_10"
+                android:text="@string/about_app"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

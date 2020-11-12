@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0095E6">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/value_4"
+            android:paddingRight="@dimen/value_8"
+            android:paddingTop="@dimen/value_4">
+
+            <ImageView
+                android:layout_width="@dimen/value_20"
+                android:layout_height="@dimen/value_20"
+                android:layout_gravity="center"
+                android:src="@drawable/left_arr_3x" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/value_5"
+                android:text="Back"
+                android:textColor="#000"
+                android:textSize="@dimen/text_15" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/payment_paypal"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginHorizontal="@dimen/value_30"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/paypal_icon"
+                android:paddingLeft="@dimen/value_40"
+                android:text="PayPal"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/payment_creditcard"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginHorizontal="@dimen/value_30"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/credit_icon"
+                android:paddingLeft="@dimen/value_40"
+                android:text="Credit Card"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/payment_googlepay"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginHorizontal="@dimen/value_30"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/googlepay_icon"
+                android:paddingLeft="@dimen/value_40"
+                android:text="Google Pay"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/payment_bank"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginHorizontal="@dimen/value_30"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/googlepay_icon"
+                android:gravity="center"
+                android:paddingLeft="@dimen/value_40"
+                android:text="Bank Account"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/payment_pesapal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_40"
+                android:layout_marginHorizontal="@dimen/value_30"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="PesaPal"
+                android:drawableLeft="@drawable/pesapal_icon"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/value_40"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_verify_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/value_30"
+            android:layout_marginTop="@dimen/value_10"
+            android:gravity="center"
+            android:paddingBottom="@dimen/value_8"
+            android:paddingTop="@dimen/value_8"
+            android:text="Please make sure If Payment is already completed from your side but still pending from PesaPal than Click here"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pb_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_transparant_gray"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview_pesapal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_payment_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSemiBlack"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/value_120"
+            android:layout_height="@dimen/value_120"
+            android:layout_gravity="center"
+            android:src="@drawable/payment_success" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Payment Complete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_20" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

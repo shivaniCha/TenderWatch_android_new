@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/value_5"
+    android:elevation="@dimen/value_7"
+    app:cardCornerRadius="@dimen/value_15">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_pricing_category"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/value_10"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_17"
+                tools:text="Hello this is text" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/value_5"
+                    android:layout_marginRight="@dimen/value_10"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_open" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_category_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/value_10"
+            android:layout_marginRight="@dimen/value_10"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_pricing"
+                android:padding="@dimen/value_10"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15"
+                tools:text="Month Subscription (9$/PM)" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginBottom="@dimen/value_7"
+                android:background="@drawable/item_pricing"
+                android:padding="@dimen/value_10"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_15"
+                tools:text="Yearly Subscription (9$/PY)" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

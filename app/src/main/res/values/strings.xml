@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">TenderWatch</string>
+    <string name="about_app"><u>About TenderWatch</u></string>
+    <string name="title_activity_login">Login</string>
+    <string name="forgetpassword"><u>Forgot Password?</u></string>
+    <string name="clientdetail"><u>Client Detail</u></string>
+
+<!--    <string name="facebook_app_id">338657463270317</string>-->
+    <string name="facebook_app_id">240335067181770</string>
+    <string name="fb_login_protocol_scheme">fb240335067181770</string>
+    <string name="create_acc"><u>CREATE AN ACCOUNT</u></string>
+    <string name="facebook_an_from_google">G+ Login</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+<!--    <string name="server_client_id">205481011089-nhcgf60hnuqkf2t4to8g2ol54l69gb9c.apps.googleusercontent.com</string>-->
+    <string name="server_client_id">153589139177-5k2g5pv0088mgaoob6t3jp5pvm2oqori.apps.googleusercontent.com</string>
+<!--    <string name="server_client_id">205481011089-vv5cbsv6ngv70lc702oi7i4iemkm4v1c.apps.googleusercontent.com</string>-->
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="take_or_select_a_picture">take a picture</string>
+    <string name="string_title_upload_progressbar_">upload image</string>
+    <string name="title_activity_main_drawer">MainDrawer</string>
+    <string name="apikey">AIzaSyAj4wQ3n0-0a1ctydCUSe7_Gu-tHT5tp2w</string>
+    <!--// AIzaSyAXnvwE26cM8wY9Xcv2APpdlmAdNTnQt9Q-->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_client_drawer">ClientDrawer</string>
+    <string name="spinner_prompt">fgdgdf</string>
+    <string name="title_activity_preview_tender_detail">PreviewTenderDetail</string>
+    <string name="title_activity_edit_tender_detail">EditTenderDetail</string>
+    <string name="title_activity_client_detail">ClientDetail</string>
+    <string name="pesapal_payment_initiated">Pesapal payment initiated</string>
+    <string name="no_tender_contractor">Welcome to TenderWatch. \n\nCurrently there are no active tenders in your scope and area of work. Tenders will show up here as soon as they are uploaded by Clients. \n\nThank you for your patience.</string>
+    <string name="no_tender_client">No Uploaded Tender.\nYou may upload new Tender.\nContract by clicking on the "+" button below.</string>
+    <string name="no_tender_contractor_client">No Uploaded Tender.</string>
+    <string name="no_favorite_tender">Currently there are not found any favorite tender for this account</string>
+    <string name="remove_account"><u>Remove Account</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success_tender_interested">We have notified the Client about your interest in this Tender.\nTo pursue please continue with the process as specified in the Tender Details</string>
+    <string name="not_payment_history">No Pending transaction\'s </string>
+    <string name="no_notifiation">Currently there are no notifications for this account</string>
+
+    <string name="tenderwatch"><![CDATA[<a href="http://TenderWatch.com/">TenderWatch</a>]]></string>
+    <string name="description_link">Description Link</string>
+
+</resources>

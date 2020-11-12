@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tenderWatch">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeAction"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/aicon_40_3x" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CountryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutMe"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SignUpSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Agreement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentSelection"
+            android:screenOrientation="portrait"
+            android:theme="@style/App" />
+        <activity
+            android:name=".Drawer.MainDrawer"
+            android:label="@string/title_activity_main_drawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ClientDrawer.ClientDrawer"
+            android:label="@string/title_activity_client_drawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".PreviewTenderDetail"
+            android:label="@string/title_activity_preview_tender_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".EditTenderDetail"
+            android:label="@string/title_activity_edit_tender_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".SubscriptionDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Paypaldemo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GooglePay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClientDetail"
+            android:screenOrientation="portrait" />
+
+        <!-- Firebase Notifications -->
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+<!--        <service android:name=".service.MyFirebaseInstanceIDService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <!-- ./Firebase Notifications -->
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContractotTenderDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NTenderDetail"
+            android:label="@string/title_activity_client_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".CardDemoDesign"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".utils.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".PesapalListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ZoomImageActivity"  android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

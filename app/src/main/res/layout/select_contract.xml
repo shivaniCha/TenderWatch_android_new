@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/relativeLayout1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="#99000000"-->
+    <!--android:orientation="vertical" >-->
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/value_15"
+        android:layout_marginTop="@dimen/value_5"
+        android:layout_marginBottom="@dimen/value_5"
+        android:background="@drawable/dialoge_pricing"
+        android:orientation="vertical"
+        android:padding="@dimen/value_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TenderWatch"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select a Subscription Plan"
+            android:textSize="@dimen/text_15" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/value_10"
+            android:background="#808080" />
+
+        <TextView
+            android:id="@+id/txt_trial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/value_12"
+            android:text="1 month free tri
+            al"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_15"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contract_subscription_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#808080" />
+
+        <TextView
+            android:id="@+id/txt_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/value_12"
+            android:text="Monthly Subscription ($15/Month)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_15"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/value_12"
+            android:text="Yearly Subscription ($120/Year)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_15"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/value_5"
+            android:background="@drawable/button"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_15" />
+
+    </LinearLayout>
+</RelativeLayout>
